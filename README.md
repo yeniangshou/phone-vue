@@ -1,4 +1,15 @@
 # project4
+<!-- 使用axios -->
+ this.$api.login.loginAPI(params).then((data)=>{
+        console.log(data);
+}).catch(()=>{   })
+<!-- 使用axios end-->
+
+<!-- il8n -->
+ $t('person.name') 
+<!--  end-->
+
+
 
 > A Vue.js project
 
