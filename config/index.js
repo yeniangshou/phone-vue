@@ -12,15 +12,15 @@ module.exports = {
     assetsPublicPath: '/',
     // 配置相关的代理，利用nodejs生成虚拟的服务器，实现跨域
     proxyTable: {  
-      '/portal': {  //代理地址  
-          target: 'http://lcnnt59008.cn.wal-mart.com:8080/',  //需要代理的地址  
-          changeOrigin: true,  //是否跨域  
-          secure: false,    
-          pathRewrite: {  
-              '^/portal': '/portal'   //本身的接口地址没有 '/api' 这种通用前缀，所以要rewrite，如果本身有则去掉  
-          }
-      }
-  },
+        '/portal': {  //代理地址  
+            target: 'http://lcnnt59008.cn.wal-mart.com:8080/',  //需要代理的地址  
+            changeOrigin: true,  //是否跨域  
+            secure: false,    
+            pathRewrite: {  
+                '^/portal': '/portal'   //本身的接口地址没有 '/api' 这种通用前缀，所以要rewrite，如果本身有则去掉  
+            }
+        }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
