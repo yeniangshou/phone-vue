@@ -14,6 +14,8 @@
 
 <script>
 import Qs from 'Qs'
+// 使用的时候就将其引入
+import _ from 'loadsh'
 export default {
   name: 'HelloWorld',
   data () {

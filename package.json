@@ -19,6 +19,7 @@
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "lib-flexible": "^0.3.2",
+    "loadsh": "0.0.4",
     "px2rem-loader": "^0.1.9",
     "style-loader": "^1.0.0",
     "vue": "^2.5.2",
