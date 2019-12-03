@@ -16,12 +16,19 @@
 import Qs from 'Qs'
 // 使用的时候就将其引入
 import _ from 'loadsh'
+// vuex的使用
+import { mapState, mapGetters, mapMutations, mapActions  } from 'vuex'
+
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to Your'
     }
+  },
+  computed: {
+    ...mapState(['count', 'student','currentLocale']),
+    ...mapGetters(['countAdd', 'strCount','getUserInfo']),
   },
   created:function(){
     this.testAxios();
@@ -43,7 +50,9 @@ export default {
       this.$api.login.loginAPI(params).then((data)=>{
         console.log(data);
       })
-    }
+    },
+    ...mapMutations(['add', 'updateStudent', 'goLogin', 'loginOut']),
+    ...mapActions(['addActions']),
   }
 }
 </script>
