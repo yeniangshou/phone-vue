@@ -48,8 +48,17 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loader: 'babel-loader',
-        include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
+        // loader: 'babel-loader',
+        include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')],
+        use:[
+              {
+                loader: 'thread-loader',
+                options: {
+                  workers: 3
+                }
+              },
+              'babel-loader',
+        ]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
