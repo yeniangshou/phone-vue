@@ -8,7 +8,10 @@ import api from './api/index'
 import 'font-awesome/css/font-awesome.min.css'
 import vuex from './store/store'
 import i18n from './i18n/index'
+import Mint from 'mint-ui';
+import 'mint-ui/lib/style.css'
 
+Vue.use(Mint);
 // 这个手机端开发进行监控请求和输出
 import vConsole from 'vconsole'
 
